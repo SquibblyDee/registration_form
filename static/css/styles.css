@@ -1,0 +1,20 @@
+*{
+    outline:1px solid red;
+}
+
+form{
+    padding: 2%;
+    outline: 2px solid black;
+}
+
+button{
+    margin: 2% 15% 0% 85% !important;
+}
+
+.row{
+    margin-bottom: 2% !important;
+}
+
+p{
+    display: inline-block
+}

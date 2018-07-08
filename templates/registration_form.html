@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Registration Form</title>
+        <!-- linking a css style sheet -->
+        <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/styles.css') }}">
+        <!-- Linking Bootstrap -->
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+        <!-- linking a javascript file -->
+        <!-- <script type="text/javascript" src="{{ url_for('static', filename='js/scripts.js') }}"></script> -->
+    </head>
+    <body>
+        <div class='container'>
+            <form action="/process" method="post">
+                <div class="form-group">
+                    <label for="email">Email address:</label>
+                    {% with messages = get_flashed_messages() %}
+                        {% if messages %}
+                            {% for message in messages %}
+                                {% if "Email" in message %}
+                                    <p style='color:red'><strong>{{message}}</strong></p>
+                                {% endif %}
+                            {% endfor %}
+                        {% endif %}
+                    {% endwith %}
+                    <input type="email" name="email" class="form-control" id="email" placeholder="name@gmail.com">
+                </div>
+                <div class="row">
+                    <div class="col">
+                        <label for="first_name">First Name:</label>
+                        {% with messages = get_flashed_messages() %}
+                            {% if messages %}
+                                {% for message in messages %}
+                                    {% if "Email" in message %}
+                                        <p style='color:red'><strong>{{message}}</strong></p>
+                                    {% endif %}
+                                {% endfor %}
+                            {% endif %}
+                        {% endwith %}
+                        <input type="text" name="first_name" class="form-control" id="first_name" placeholder="First name">
+                    </div>
+                    <div class="col">
+                        <label for="last_name">Last Name:</label>
+                        {% with messages = get_flashed_messages() %}
+                            {% if messages %}
+                                {% for message in messages %}
+                                    {% if "Email" in message %}
+                                        <p style='color:red'><strong>{{message}}</strong></p>
+                                    {% endif %}
+                                {% endfor %}
+                            {% endif %}
+                        {% endwith %}
+                        <input type="text" name="last_name" class="form-control" id="last_name" placeholder="Last name">
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col">
+                        <label for="password">Password:</label>
+                        {% with messages = get_flashed_messages() %}
+                            {% if messages %}
+                                {% for message in messages %}
+                                    {% if "Email" in message %}
+                                        <p style='color:red'><strong>{{message}}</strong></p>
+                                    {% endif %}
+                                {% endfor %}
+                            {% endif %}
+                        {% endwith %}
+                        <input type="password" name="password" class="form-control" id="password" placeholder="">
+                    </div>
+                    <div class="col">
+                        <label for="confirm_password">Confirm Password:</label>
+                        {% with messages = get_flashed_messages() %}
+                            {% if messages %}
+                                {% for message in messages %}
+                                    {% if "Email" in message %}
+                                        <p style='color:red'><strong>{{message}}</strong></p>
+                                    {% endif %}
+                                {% endfor %}
+                            {% endif %}
+                        {% endwith %}
+                        <input type="password" name="confirm_password" class="form-control" id="confirm_password" placeholder="">
+                    </div>
+                </div>
+                <button type="submit" id='submit' name="submit" class="btn btn-primary my-1">Submit</button>
+            </form>
+        </div>
+    </body>
+</html>
