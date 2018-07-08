@@ -5,8 +5,6 @@ form{
 
 button{
     margin: 2% 15% 0% 85% !important;
-    display: inline-block !important;
-    vertical-align: top !important;
 }
 
 p{
@@ -16,5 +14,9 @@ p{
 
 .row{
     margin-bottom: 2% !important;
+}
+
+.container{
+    margin-top: 5%;
 }
 
