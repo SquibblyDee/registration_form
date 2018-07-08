@@ -30,15 +30,11 @@ def process():
     elif request.form['password'] != request.form['confirm_password']:
         flash('Passwords must match!')
         error = True;
-
     if error == True:
         return redirect('/')
     else:
         flash('Thanks for submitting your information!')
         return redirect('/')
-
-    
-
 
 if __name__ == '__main__':
     app.run(debug=True)

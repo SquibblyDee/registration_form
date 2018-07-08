@@ -1,7 +1,3 @@
-*{
-    outline:1px solid red;
-}
-
 form{
     padding: 2%;
     outline: 2px solid black;
@@ -13,11 +9,12 @@ button{
     vertical-align: top !important;
 }
 
-.row{
-    margin-bottom: 2% !important;
-}
-
 p{
     display: inline-block;
     font-size: 10pt;
 }
+
+.row{
+    margin-bottom: 2% !important;
+}
+
