@@ -9,6 +9,8 @@ form{
 
 button{
     margin: 2% 15% 0% 85% !important;
+    display: inline-block !important;
+    vertical-align: top !important;
 }
 
 .row{
