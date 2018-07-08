@@ -20,9 +20,9 @@
                                 {% if "Email" in message %}
                                     <p style='color:red'>{{message}}</p>
                                 {% endif %}
-                                <!-- {% if "Thank" in message %} -->
-                                    <!-- <p><strong>{{message}}</strong></p> -->
-                                <!-- {% endif %} -->
+                                {% if "Thank" in message %}
+                                    <p><strong>{{message}}</strong></p>
+                                {% endif %}
                             {% endfor %}
                         {% endif %}
                     {% endwith %}
@@ -71,11 +71,11 @@
                         <input type="password" name="password" class="form-control" id="password" placeholder="">
                     </div>
                     <div class="col">
-                        <label for="confirm_password">Confirm:</label>
+                        <label for="confirm_password">Confirm Password:</label>
                         {% with messages = get_flashed_messages() %}
                             {% if messages %}
                                 {% for message in messages %}
-                                    {% if "Confirm" or "Must" in message %}
+                                    {% if "Confirm" in message %}
                                         <p style='color:red'>{{message}}</p>
                                     {% endif %}
                                 {% endfor %}

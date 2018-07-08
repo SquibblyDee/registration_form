@@ -16,12 +16,10 @@ def process():
         flash('Last name field required!', 'error')
     elif len(request.form['password']) < 1:
         flash('Password field required!', 'error')
-    elif len(request.form['password']) < 9:
-        flash('Password minimum 9 characters!')
     elif len(request.form['confirm_password'])< 1:
         flash('Confirm field required!', 'error')
-    elif request.form['password'] != request.form['confirm_password']:
-        flash('Must match password field!')
+    elif len(request.form['password']) < 9:
+        flash('Password minimum 9 characters!')
     else:
         flash('Thanks for submitting your information.')
     return redirect('/')

@@ -13,15 +13,11 @@ button{
     vertical-align: top !important;
 }
 
-p{
-    display: inline-block;
-    font-size: 10pt;
-}
-
 .row{
     margin-bottom: 2% !important;
 }
 
-.container{
-    margin-top: 5%; 
+p{
+    display: inline-block;
+    font-size: 10pt;
 }
