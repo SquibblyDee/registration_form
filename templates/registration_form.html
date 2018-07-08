@@ -18,7 +18,10 @@
                         {% if messages %}
                             {% for message in messages %}
                                 {% if "Email" in message %}
-                                    <p style='color:red'><strong>{{message}}</strong></p>
+                                    <p style='color:red'>{{message}}</p>
+                                {% endif %}
+                                {% if "Thank" in message %}
+                                    <p><strong>{{message}}</strong></p>
                                 {% endif %}
                             {% endfor %}
                         {% endif %}
@@ -32,7 +35,7 @@
                             {% if messages %}
                                 {% for message in messages %}
                                     {% if "First" in message %}
-                                        <p style='color:red'><strong>{{message}}</strong></p>
+                                        <p style='color:red'>{{message}}</p>
                                     {% endif %}
                                 {% endfor %}
                             {% endif %}
@@ -45,7 +48,7 @@
                             {% if messages %}
                                 {% for message in messages %}
                                     {% if "Last" in message %}
-                                        <p style='color:red'><strong>{{message}}</strong></p>
+                                        <p style='color:red'>{{message}}</p>
                                     {% endif %}
                                 {% endfor %}
                             {% endif %}
@@ -60,7 +63,7 @@
                             {% if messages %}
                                 {% for message in messages %}
                                     {% if "Password" in message %}
-                                        <p style='color:red'><strong>{{message}}</strong></p>
+                                        <p style='color:red'>{{message}}</p>
                                     {% endif %}
                                 {% endfor %}
                             {% endif %}
@@ -73,7 +76,10 @@
                             {% if messages %}
                                 {% for message in messages %}
                                     {% if "Confirm" in message %}
-                                        <p style='color:red'><strong>{{message}}</strong></p>
+                                        <p style='color:red'>{{message}}</p>
+                                    {% endif %}
+                                    {% if "match!" in message %}
+                                        <p style='color:red'>{{message}}</p>
                                     {% endif %}
                                 {% endfor %}
                             {% endif %}
@@ -81,15 +87,6 @@
                         <input type="password" name="confirm_password" class="form-control" id="confirm_password" placeholder="">
                     </div>
                 </div>
-                {% with messages = get_flashed_messages() %}
-                    {% if messages %}
-                        {% for message in messages %}
-                            {% if "Confirm" in message %}
-                                <p>{{message}}</strong></p>
-                            {% endif %}
-                        {% endfor %}
-                    {% endif %}
-                {% endwith %}
                 <button type="submit" id='submit' name="submit" class="btn btn-primary my-1">Submit</button>
             </form>
         </div>
